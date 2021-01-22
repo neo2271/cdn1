@@ -1,0 +1,39 @@
+.fold {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.unfolder {
+    display: none;
+}
+
+.toggle-label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.unfold-icon,
+.fold-icon {
+    display: inline-block;
+}
+
+.unfolder~.fold {
+    display: none;
+}
+
+.unfolder~label .fold-icon {
+    display: none;
+}
+
+.unfolder:checked~.fold {
+    display: block;
+}
+
+.unfolder:checked~label .fold-icon {
+    display: inline-block;
+}
+
+.unfolder:checked~label .unfold-icon {
+    display: none;
+}
